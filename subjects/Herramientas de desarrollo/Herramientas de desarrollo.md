@@ -2,13 +2,16 @@
 
 ## Control de versión
 
-![[Screenshot from 2023-07-24 11-36-04.png]]
-![[Screenshot from 2023-07-24 11-34-45.png]]
-![[Screenshot from 2023-07-24 11-33-01.png]]
+"Control de versión" tradicional
+![Mal control de versión](mal_control_de_version.png)
+Un solo archivo
+![Buen control de versión](buen_control_de_version.png)
+Historial de cambios
+![Github Desktop](gitHub_desktop_thesis.png)
 
 ### Centralizado vs distribuido
-![[centralized.png]]
-![[distributed.png]]
+![Centralizado](centralized.png)
+![Distribuido](distributed.png)
 
 ### Links
 - [Instalar Github Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop)
@@ -18,9 +21,9 @@
 
 ## Entorno de desarrollo
 
-![[Pasted image 20230724130318.png]]
-![[Pasted image 20230724130959.png]]
-![[Pasted image 20230724132604.png]]
+![IAR](IAR.png)
+![VS Code](VS_code.png)
+![Notepad](notepad.png)
 
 ### Links
 
