@@ -13,13 +13,50 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Herramientas de desarrollo.md",
-                "mode": "preview",
-                "source": true
+                "file": "Introduccion a conceptos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "212c6502c39b096b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introduccion a conceptos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d44640bf2e98531",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Compiladores y depuradores.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b3bfa5d39b86b4bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Integración continua.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -69,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5
+    "width": 235.5
   },
   "right": {
     "id": "b1aca1b94aa710d3",
@@ -85,8 +122,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Herramientas de desarrollo.md",
-                "collapseAll": false,
+                "file": "Integración continua.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -102,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Herramientas de desarrollo.md",
+                "file": "Integración continua.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +162,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Herramientas de desarrollo.md"
+                "file": "Integración continua.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,15 +183,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be83befbdff39d55",
+  "active": "b3bfa5d39b86b4bf",
   "lastOpenFiles": [
-    "buen_control_de_version.png",
-    "mal_control_de_version.png",
-    "gitHub_desktop_thesis.png",
-    "notepad.png",
-    "VS_code.png",
+    "Compiladores y depuradores.md",
+    "Integración continua.md",
+    "Introduccion a conceptos.md",
+    "Editores de texto y Entorno de Desarrollo Integrados.md",
+    "Images/mal_control_de_version.png",
+    "Images/notepad.png",
+    "Images/buen_control_de_version.png",
+    "Images",
+    "Images/compilation-process-in-c2.png",
+    "Images/Compilation-Process-in-C.png",
+    "Images/gitHub_desktop_thesis.png",
+    "Images/VS_code.png",
     "Intro Sistemas Operativos en Tiempo Real (RTOS) 1.md",
-    "IAR.png",
-    "Herramientas de desarrollo.md"
+    "Images/IAR.png"
   ]
 }
