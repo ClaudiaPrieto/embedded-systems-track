@@ -1,0 +1,14 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.adapterTargetName": "esp32c3",
+  "idf.openOcdConfigs": [
+    "board/esp32c3-bridge.cfg"
+  ],
+  "idf.portWin": "COM5",
+  "files.associations": {
+    "esp_log.h": "c",
+    "uart.h": "c",
+    "freertos.h": "c",
+    "task.h": "c"
+  }
+}

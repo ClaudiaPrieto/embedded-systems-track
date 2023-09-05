@@ -1,0 +1,4 @@
+[mapping: libmain]
+archive: libmain.a
+entries:
+    blink_exsample_main:printTest (noflash)
