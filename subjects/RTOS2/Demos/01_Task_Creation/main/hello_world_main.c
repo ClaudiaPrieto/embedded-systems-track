@@ -7,13 +7,16 @@
 
 void DemoTask(void *param)
 {
-    printf("Demo Task Running\n");
-    vTaskDelay(pdMS_TO_TICKS(1000));
+    while(1)
+    {
+        printf("Demo Task Running\n");
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
 }
 
 void app_main(void)
 {
-    printf("Hello world!\n");
+    printf("RTOS 2 Task Demo!\n");
 
     xTaskCreate( DemoTask,
                  "Demo Task",
@@ -21,6 +24,4 @@ void app_main(void)
                  NULL,
                  1,
                  NULL);
-
-    vTaskStartScheduler();
 }

@@ -6,7 +6,10 @@
   ],
   "files.associations": {
     "freertos.h": "c",
-    "freertosconfig.h": "c"
+    "freertosconfig.h": "c",
+    "array": "c",
+    "string": "c",
+    "string_view": "c"
   },
   "idf.portWin": "COM5"
 }
