@@ -2,13 +2,15 @@
   "C_Cpp.intelliSenseEngine": "Tag Parser",
   "idf.adapterTargetName": "esp32c3",
   "idf.openOcdConfigs": [
-    "board/esp32c3-bridge.cfg"
-  ],
+    "board/esp32c3-builtin.cfg"
+],
   "files.associations": {
     "gpio.h": "c",
     "adc.h": "c",
     "task.h": "c",
-    "esp_adc_cal.h": "c"
-  },
-  "idf.portWin": "COM5"
+    "esp_adc_cal.h": "c",
+    "adc_oneshot.h": "c",
+    "cstdlib": "c"
+},
+  "idf.portWin": "COM18"
 }

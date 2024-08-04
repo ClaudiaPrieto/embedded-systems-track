@@ -4,42 +4,65 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
-#include "esp_spi_flash.h"
-#include "driver/adc.h"
-#include "esp_adc_cal.h"
+#include "spi_flash_mmap.h"
+#include "esp_adc/adc_oneshot.h"
+#include "esp_adc/adc_cali.h"
+#include "esp_adc/adc_cali_scheme.h"
 
 #define ADC_SAMPLES (uint8_t)20
-#define ADC_NEW
-uint32_t adc_reading = 0;
-uint32_t voltage = 0;
-static esp_adc_cal_characteristics_t *adc_chars;
-
+#undef ADC_NEW
+int adc_reading = 0;
+int adc_sample = 0;
+int voltage = 0;
 
 /*
-11dB Reference Voltage: 2.8V
+12dB Reference Voltage: 2.8V
 */
 
 void app_main(void)
 {
     printf("Microcontrollers 2 ADC Demo!\n");
-    adc1_config_channel_atten(ADC1_CHANNEL_0,ADC_ATTEN_DB_11);
-    adc1_config_width(ADC_WIDTH_BIT_12);
 
-    adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
-    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, 1100, adc_chars); 
+    //Create ADC Handle
+    adc_oneshot_unit_handle_t adc1_handle;
+    adc_oneshot_unit_init_cfg_t adc1_cfg = {
+        .unit_id = ADC_UNIT_1,
+    };
+
+    ESP_ERROR_CHECK(adc_oneshot_new_unit(&adc1_cfg, &adc1_handle));
+
+    //Configure ADC
+     adc_oneshot_chan_cfg_t config = {
+        .bitwidth = ADC_BITWIDTH_12,
+        .atten = ADC_ATTEN_DB_12,
+    };
+    ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL_0, &config));
+
+    //Calibrate ADC, use Curve Fitting method
+    adc_cali_handle_t adc1_cali_chan0_handle = NULL;
+    adc_cali_curve_fitting_config_t cali_config = {
+            .unit_id = ADC_UNIT_1,
+            .chan = ADC_CHANNEL_0,
+            .atten = ADC_ATTEN_DB_12,
+            .bitwidth = ADC_BITWIDTH_12,
+        };
+
+    adc_cali_create_scheme_curve_fitting(&cali_config, &adc1_cali_chan0_handle);
 
     while(1)
     {
         adc_reading = 0;
         for (uint8_t i = 0; i < ADC_SAMPLES; i++) 
         {
-            adc_reading += adc1_get_raw(ADC1_CHANNEL_0);
+            adc_oneshot_read(adc1_handle, ADC_CHANNEL_0, &adc_sample);
+            adc_reading += adc_sample;
+            printf("ADC :%d \n", adc_sample);
         }
         adc_reading /= ADC_SAMPLES;
 #ifdef ADC_NEW
          printf("ADC raw to Voltage\n");
         //Convert adc_reading to voltage in mV
-        voltage = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
+        adc_cali_raw_to_voltage(adc1_cali_chan0_handle, adc_reading, &voltage);
 #else
        
         printf("ADC formula!\n");
