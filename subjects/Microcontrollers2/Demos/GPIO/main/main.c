@@ -6,6 +6,7 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "driver/gpio.h"
+#include "esp_rom_gpio.h"
 
 #define GPIO6_BITMASK (1UL << GPIO_NUM_6)
 #define GPIO7_BITMASK (1UL << GPIO_NUM_7)
@@ -36,7 +37,7 @@ void app_main(void)
     gpio_config(&io_conf);
 
     // Initialize input pin through method #2: APIs
-    gpio_pad_select_gpio(GPIO_NUM_7);
+    esp_rom_gpio_pad_select_gpio(GPIO_NUM_7);
     gpio_set_direction(GPIO_NUM_7, GPIO_MODE_INPUT);
     gpio_pulldown_dis(GPIO_NUM_7);
     gpio_pullup_en(GPIO_NUM_7);
@@ -54,6 +55,6 @@ void app_main(void)
             printf("Button Released! \n");
             gpio_set_level(GPIO_NUM_6, 0); 
         }
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
