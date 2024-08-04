@@ -4,8 +4,8 @@
 #include "esp_err.h"
 
 #define LEDC_OUTPUT_IO          (6) // Define the output GPIO
-#define LEDC_DUTY               (4095) // Set duty to 50%. ((2 ** 13) - 1) * 50% = 4095
-#define LEDC_FREQUENCY          (2000) // Frequency in Hertz. Set frequency at 5 kHz
+#define LEDC_DUTY               (2048) // Set duty to 50%. ((2 ** 13) - 1) * 50% = 4095
+#define LEDC_FREQUENCY          (4000) // Frequency in Hertz. Set frequency at 4 kHz
 
 ledc_timer_config_t ledc_timer = 
 {
