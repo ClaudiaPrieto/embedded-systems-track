@@ -8,5 +8,5 @@ subjects/Microcontrollers2/Demos/RTC/build
 subjects/Microcontrollers2/Demos/Timer/build
 subjects/Microcontrollers2/Demos/UART/build
 subjects/Microcontrollers2/Demos/GPIO_Interrupt/.vscode
-subjects/Microcontrollers2/Demos/RTC/build/.vscode
-subjects/Microcontrollers2/Demos/Timer/build/.vscode
+subjects/Microcontrollers2/Demos/RTC/.vscode
+subjects/Microcontrollers2/Demos/Timer/.vscode
