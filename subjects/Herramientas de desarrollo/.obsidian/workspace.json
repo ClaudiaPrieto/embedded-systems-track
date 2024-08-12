@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Integración continua.md",
+                "file": "Introduccion a conceptos.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Integración continua.md",
+                "file": "Introduccion a conceptos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Integración continua.md"
+                "file": "Introduccion a conceptos.md"
               }
             }
           }
@@ -171,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,10 +183,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b3bfa5d39b86b4bf",
+  "active": "be83befbdff39d55",
   "lastOpenFiles": [
-    "Compiladores y depuradores.md",
+    "Pasted image 20240812124459.png",
+    "Pasted image 20240812123441.png",
+    "Pasted image 20240812122448.png",
     "Integración continua.md",
+    "Compiladores y depuradores.md",
     "Introduccion a conceptos.md",
     "Editores de texto y Entorno de Desarrollo Integrados.md",
     "Images/mal_control_de_version.png",
